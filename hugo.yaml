@@ -64,3 +64,4 @@ enableRobotsTXT: true
 
 params:
   author: "Muhammad Mustafa Monowar"
+  description: "A quiet corner for words and wanderings"
