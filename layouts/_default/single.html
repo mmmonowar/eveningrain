@@ -15,7 +15,7 @@
 
     {{ with .Params.tags }}
     <footer class="post-tags">
-        {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+        {{ range . }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>{{ end }}
     </footer>
     {{ end }}
 

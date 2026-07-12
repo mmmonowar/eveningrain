@@ -341,3 +341,56 @@ header, main, footer {
     padding: 4rem 3rem;
   }
 }
+
+/* Site Nav */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--iron-grey);
+}
+
+.site-nav a {
+  font-size: 0.875rem;
+  color: var(--grey-olive);
+}
+
+.site-nav a:hover {
+  color: var(--platinum);
+}
+
+/* Taxonomy Pages */
+.taxonomy h1,
+.terms h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.terms-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.terms-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.terms-list a {
+  color: var(--cool-steel);
+}
+
+.terms-list a:hover {
+  color: var(--platinum);
+}
+
+.term-count {
+  font-size: 0.75rem;
+  color: var(--charcoal);
+}
