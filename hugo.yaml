@@ -15,6 +15,20 @@ taxonomies:
   tag: "tags"
   category: "categories"
 
+# Output formats
+outputFormats:
+  SearchIndex:
+    baseName: search
+    isPlainText: true
+    mediaType: application/json
+    notAlternative: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - SearchIndex
+
 # Menu
 menu:
   main:
@@ -24,9 +38,15 @@ menu:
     - name: Tags
       url: "/tags/"
       weight: 2
+    - name: Search
+      url: "/search/"
+      weight: 3
     - name: RSS
       url: "/index.xml"
-      weight: 3
+      weight: 4
+
+# Build all content regardless of date
+buildFuture: true
 
 # Page bundles support
 enableRobotsTXT: true

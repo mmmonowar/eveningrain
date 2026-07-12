@@ -11,15 +11,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS placeholder — FEAT-06 will create static/css/style.css -->
     <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "/index.xml" | absURL }}">
 
     {{ block "head" . }}{{ end }}
 </head>
 <body>
-    <header>
-        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    <header class="site-header">
+        <a href="{{ .Site.BaseURL }}" class="site-title">{{ .Site.Title }}</a>
+        <div class="search-container" data-search-index="{{ "search.json" | absURL }}">
+            <input type="search" id="search-input" class="search-input" placeholder="Search posts...">
+            <div id="search-results" class="search-results"></div>
+        </div>
     </header>
 
     <nav class="site-nav">
@@ -34,6 +37,7 @@
 
     <footer>{{ .Site.Params.copyright }}</footer>
 
+    <script src="{{ "js/search.js" | absURL }}"></script>
     {{ block "scripts" . }}{{ end }}
 </body>
 </html>
