@@ -3,8 +3,13 @@ languageCode: "en"
 title: "Evening Rain"
 paginate: 20
 
-# Content directory (relative to eveningrain/)
-contentDir: "../eveningrain-contents/10 Posts"
+# Content mounts (maps external content repo into Hugo sections)
+module:
+  mounts:
+    - source: content/search
+      target: content/search
+    - source: ../eveningrain-contents/10 Posts
+      target: content/posts
 
 # Permalinks
 permalinks:
@@ -14,6 +19,12 @@ permalinks:
 taxonomies:
   tag: "tags"
   category: "categories"
+
+# Frontmatter mapping: published → date
+frontmatter:
+  date:
+    - published
+    - date
 
 # Output formats
 outputFormats:
