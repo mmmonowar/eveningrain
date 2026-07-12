@@ -10,9 +10,20 @@ contentDir: "../eveningrain-contents/10 Posts"
 permalinks:
   posts: "/:slug/"
 
-# Taxonomies (enabled for future FEAT-09)
+# Taxonomies
 taxonomies:
   tag: "tags"
+  category: "categories"
+
+# Menu
+menu:
+  main:
+    - name: Home
+      url: "/"
+      weight: 1
+    - name: Tags
+      url: "/tags/"
+      weight: 2
 
 # Page bundles support
 enableRobotsTXT: true

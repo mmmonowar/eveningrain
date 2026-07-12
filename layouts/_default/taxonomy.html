@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="taxonomy">
+    <h1>{{ .Title }}</h1>
+
+    {{ range .Pages.ByDate.Reverse }}
+    <article class="archive-entry">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <time>{{ .Date.Format "2006-01-02" }}</time>
+    </article>
+    {{ end }}
+</article>
+{{ end }}
