@@ -23,10 +23,8 @@ jobs:
           path: eveningrain
 
       - name: Checkout content
-        uses: actions/checkout@v4
-        with:
-          repository: mmmonowar/eveningrain-contents
-          path: eveningrain/eveningrain-contents
+        shell: bash
+        run: git clone --depth=1 https://github.com/mmmonowar/eveningrain-contents.git eveningrain/eveningrain-contents
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
