@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article class="home">
+    <header class="home-header">
+        <h1>{{ .Site.Title }}</h1>
+        <p class="tagline">{{ .Site.Params.description }}</p>
+    </header>
+
+    <section class="recent-posts">
+        {{ range first 10 .Site.RegularPages }}
+        <article class="post-preview">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <time>{{ .Params.published }}</time>
+            {{ with .Summary }}<p>{{ . }}</p>{{ end }}
+        </article>
+        {{ end }}
+    </section>
+</article>
+{{ end }}
