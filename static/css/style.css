@@ -307,3 +307,37 @@ footer {
 .archive-entry p {
   display: none;
 }
+
+/* Fluid Typography */
+html {
+  font-size: clamp(15px, 1vw + 12px, 17px);
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+h3 {
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+}
+
+/* Responsive Spacing */
+header, main, footer {
+  padding: 1.5rem 1rem;
+}
+
+@media (min-width: 641px) {
+  header, main, footer {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  header, main, footer {
+    padding: 4rem 3rem;
+  }
+}
