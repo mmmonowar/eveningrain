@@ -16,3 +16,6 @@ taxonomies:
 
 # Page bundles support
 enableRobotsTXT: true
+
+params:
+  author: "Muhammad Mustafa Monowar"
