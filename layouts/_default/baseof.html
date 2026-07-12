@@ -6,6 +6,8 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
+    <script>(function(){var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme:light)").matches?"light":"dark"}document.documentElement.setAttribute("data-theme",t);})();</script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +25,7 @@
             <input type="search" id="search-input" class="search-input" placeholder="Search posts...">
             <div id="search-results" class="search-results"></div>
         </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
     </header>
 
     <nav class="site-nav">
@@ -37,6 +40,7 @@
 
     <footer>{{ .Site.Params.copyright }}</footer>
 
+    <script src="{{ "js/theme.js" | absURL }}"></script>
     <script src="{{ "js/search.js" | absURL }}"></script>
     {{ block "scripts" . }}{{ end }}
 </body>
