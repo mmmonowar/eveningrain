@@ -9,7 +9,7 @@
         {{ range first 10 .Site.RegularPages }}
         <article class="post-preview">
             <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            <time>{{ .Params.published }}</time>
+            <time>{{ .Date.Format "2006-01-02" }}</time>
             {{ with .Summary }}<p>{{ . }}</p>{{ end }}
         </article>
         {{ end }}

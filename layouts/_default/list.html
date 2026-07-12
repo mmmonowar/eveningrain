@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article class="archive">
+    <h1>Archive</h1>
+
+    {{ range .Site.RegularPages.ByDate.Reverse.GroupByDate "2006" }}
+    <section class="archive-year">
+        <h2>{{ .Key }}</h2>
+
+        {{ range .Pages.GroupByDate "January" }}
+        <section class="archive-month">
+            <h3>{{ .Key }}</h3>
+
+            {{ range .Pages }}
+            <article class="archive-entry">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                <time>{{ .Date.Format "2006-01-02" }}</time>
+                {{ with .Summary }}<p>{{ . }}</p>{{ end }}
+            </article>
+            {{ end }}
+        </section>
+        {{ end }}
+    </section>
+    {{ end }}
+</article>
+{{ end }}
