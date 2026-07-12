@@ -1,0 +1,18 @@
+baseURL: "https://mmmonowar.github.io/eveningrain/"
+languageCode: "en"
+title: "Evening Rain"
+paginate: 20
+
+# Content directory (relative to eveningrain/)
+contentDir: "../eveningrain-contents/10 Posts"
+
+# Permalinks
+permalinks:
+  posts: "/:slug/"
+
+# Taxonomies (enabled for future FEAT-09)
+taxonomies:
+  tag: "tags"
+
+# Page bundles support
+enableRobotsTXT: true
